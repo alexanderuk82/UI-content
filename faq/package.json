@@ -1,0 +1,18 @@
+{
+  "name": "faq-code",
+  "version": "1.0.0",
+  "description": "Mock up prototyping",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alexander",
+  "license": "ISC",
+  "dependencies": {
+    "filterizr": "^2.2.4"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "FAQ"
+  ]
+}
