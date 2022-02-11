@@ -1,0 +1,58 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixin' as *;
+
+.post {
+    display: grid;
+    grid-template-columns: min-content auto;
+    column-gap: 3rem;
+    cursor: pointer;
+    padding-bottom: 2.8rem;
+    border-bottom: 2px solid var(--clr-light-gray);
+
+    &__image {
+        width: 25rem;
+        height: 15rem;
+        &--img {
+            width: 25rem;
+            height: 15rem;
+            object-fit: cover;
+        }
+    }
+
+    &__text {
+        display: grid;
+        justify-items: start;
+        align-items: start;
+
+        &__tag {
+            text-transform: capitalize;
+            color: var(--clr-green);
+
+            &--new {
+                color: #fff;
+                background-color: var(--new-tag);
+                padding: 0.1rem 0.4rem;
+                border-radius: 0.2rem;
+            }
+        }
+
+        &__CTA {
+            display: flex;
+        }
+
+        &__time {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+
+            &--icon {
+                width: 2.2rem;
+                margin-right: 0.5rem;
+            }
+
+            &--minute {
+                transform: translateY(2px);
+            }
+        }
+    }
+}
