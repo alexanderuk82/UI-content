@@ -1,0 +1,107 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixin' as *;
+
+.header {
+    background-color: #fff;
+    &__container {
+        display: grid;
+        grid-template-columns: min-content auto auto;
+        align-items: center;
+        @extend %container;
+        form:nth-child(2) {
+            margin-left: 4rem;
+        }
+
+        *:nth-child(3) {
+            justify-self: end;
+        }
+    }
+
+    &__logo {
+        width: 15rem;
+        height: 3rem;
+        cursor: pointer;
+        img {
+            width: inherit;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__nav {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__quick-link {
+        display: flex;
+        margin-right: 2rem;
+        position: relative;
+        padding: 0.3rem 0;
+        & > * {
+            margin-right: 2rem;
+        }
+
+        &::after {
+            content: '';
+            width: 0.4px;
+            height: 100%;
+            background-color: var(--clr-dark-gray);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
+    &__link {
+        display: flex;
+        text-decoration: none;
+        color: inherit;
+        text-transform: capitalize;
+        &--icon {
+            width: 1.3rem;
+            margin-right: 0.7rem;
+        }
+    }
+
+    &__menu {
+        list-style: none;
+    }
+
+    &__item {
+        margin-right: 2rem;
+    }
+
+    &__icon-menu {
+        width: 1.9rem;
+        height: 2.8px;
+        background-color: transparent;
+        background-color: var(--clr-blue);
+        position: relative;
+        cursor: pointer;
+        margin-left: 1rem;
+
+        &::before,
+        &::after {
+            content: '';
+            width: 1.9rem;
+            height: 2.8px;
+            background-color: transparent;
+            background-color: var(--clr-blue);
+            position: absolute;
+        }
+
+        &::before {
+            top: 6px;
+        }
+        &::after {
+            top: -6px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixin' as *;
+
+.options {
+    min-height: 50rem;
+    background-color: var(--clr-blue);
+    padding: 4rem;
+
+    &__title {
+        width: 40%;
+        margin: 0 auto;
+    }
+
+    &__buttons {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__results {
+        display: grid;
+        justify-content: center;
+        row-gap: 3rem;
+    }
+}

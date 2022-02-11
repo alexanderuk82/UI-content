@@ -1,0 +1,42 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixin' as *;
+
+//* Component checkboxes
+
+.checkbox {
+    width: 100%;
+
+    .check + label {
+        cursor: pointer;
+        position: relative;
+        margin-left: 3rem;
+        &:before {
+            content: '\2714';
+            border: 0.1rem solid var(--clr-dark-gray);
+            border-radius: 0.1rem;
+            width: 2rem;
+            height: 2rem;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+            position: absolute;
+            color: transparent;
+        }
+    }
+
+    .check {
+        display: none;
+    }
+
+    .check:checked + label:before {
+        background-color: var(--clr-blue);
+        color: #fff;
+        border: 0;
+    }
+
+    .items {
+        color: var(--clr-dark-gray);
+    }
+}

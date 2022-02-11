@@ -1,0 +1,46 @@
+@use '../abstracts/variable' as *;
+@use '../abstracts/mixin' as *;
+
+//* Component search boxes
+
+.search {
+    width: 40%;
+    &__box {
+        background-color: var(--clr-light-gray);
+
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        padding: 0 1.4rem;
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    &__input {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        padding: 1.2rem 0 1.2rem 1.2rem;
+        width: 100%;
+        font-family: var(--txt-main);
+        color: inherit;
+        &::placeholder {
+            color: var(--clr-blue);
+            text-transform: capitalize;
+            font-family: inherit;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        outline: 0;
+        border: 0;
+        width: 2rem;
+        height: 4rem;
+        cursor: pointer;
+        &--icon {
+            width: 1.4rem;
+        }
+    }
+}

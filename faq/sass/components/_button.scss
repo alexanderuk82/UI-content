@@ -1,0 +1,19 @@
+// * Butons for project
+
+.btn {
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    padding: 1rem 1.5rem;
+    text-transform: capitalize;
+    outline: 0;
+    transition: opacity 0.2s;
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+
+    &__main {
+        background-color: var(--clr-green);
+    }
+}
