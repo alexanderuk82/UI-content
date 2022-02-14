@@ -305,7 +305,7 @@ body {
   align-content: start;
   row-gap: 3rem;
   overflow-y: scroll;
-  height: 80vh;
+  height: 100vh;
 }
 .main__content::-webkit-scrollbar {
   display: none;
