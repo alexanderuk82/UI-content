@@ -1,27 +1,25 @@
 @use '../abstracts/variable' as *;
 @use '../abstracts/mixin' as *;
 
-.option-btn {
-    border: 0;
-    color: var(--clr-blue);
-    border-radius: 5px;
-    padding: 1.2rem 1.5rem;
-    text-transform: capitalize;
-    outline: 0;
-    transition: opacity 0.2s;
-    font-weight: map-get($fontWeight, bold);
-    transform: scale(0.9);
-    transition: all 0.2s;
-    font-size: map-get($fontSize, txtLg);
-    margin-bottom: 2rem;
-    &:hover {
-        opacity: 0.9;
-        cursor: pointer;
-    }
+button.save {
+    @include button(save);
+}
+button.cancel {
+    @include button(cancel);
+}
+button.outline {
+    @include button(outline);
+}
+button.action {
+    @include button(action);
+}
+.btn-profile {
+    @include button(profile);
+}
 
-    &.active {
-        transform: scale(0.9);
-        background-color: var(--clr-green);
-        color: #fff;
-    }
+button.add-carrier {
+    @include button(carrier);
+}
+.button-email {
+    @include button(btn-email);
 }
